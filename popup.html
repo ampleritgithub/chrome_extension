@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Websites</title>
+    <link rel="stylesheet" href="popup.css">
+    <script type="module" src="api-client.js"></script>
+    <script type="module" src="popup.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Chat with Websites</h1>
+            <div class="analyze-section">
+                <button id="analyze-btn" class="primary-btn">
+                    <span class="icon"></span>
+                    Analyze Page
+                </button>
+                <div id="analysis-status" class="status hidden">
+                    <span class="status-icon">⏳</span>
+                    <span class="status-text"></span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="chat-output" class="chat-output">
+                <div class="welcome-message">
+                    <h2>👋 Welcome!</h2>
+                    <p>Click 'Analyze Page' to start exploring the current webpage's content.</p>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <textarea 
+                    id="user-input" 
+                    class="query-input" 
+                    placeholder="Ask any question about this webpage..."
+                    rows="3"
+                ></textarea>
+                <button id="send-btn" class="send-btn">
+                    <span class="icon">📤</span>
+                    Send
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="loading-indicator hidden">
+                <div class="spinner"></div>
+                <span>Processing...</span>
+            </div>
+            <div class="error-message hidden">
+                <span class="icon">⚠️</span>
+                <span class="message"></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
