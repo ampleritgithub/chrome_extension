@@ -1,0 +1,16 @@
+{
+  "name": "chrome-extension-api",
+  "version": "1.0.0",
+  "description": "API for Chrome extension",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "@vercel/node": "^2.9.6"
+  }
+}
